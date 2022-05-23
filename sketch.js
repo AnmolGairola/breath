@@ -1,4 +1,4 @@
-let radius = 100, increase = true, wait = false, bruh = 0
+let radius = 100, increase = true, wait = true, bruh = 0
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
