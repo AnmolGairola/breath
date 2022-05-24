@@ -1,4 +1,5 @@
-let radius = 100, increase = true, wait = true, bruh = 0
+let radius = 100, increase = true, wait = false, bruh = 0, countDown = true
+let timer = 3
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -7,13 +8,14 @@ function setup() {
 }
 
 function draw() {  
+
   createCanvas(windowWidth, windowHeight);
   background(36, 36, 36)
   
   
   //Inhale----------------------------------------------------
   
-  if(radius < 300 && increase && !wait) radius += log(radius)/4
+  if(radius < 300 && increase && !wait && !countDown) radius += log(radius)/4
   
   if(radius > 300) {
     radius = 300
@@ -24,7 +26,7 @@ function draw() {
   //Wait----------------------------------------------------
   
   if(wait){
-    bruh += log(300) * .7
+    bruh += log(300) * .6
     print(bruh)
     
     if(bruh > 300){
@@ -67,7 +69,7 @@ function draw() {
   
   }
   
-  else if(increase){
+  else if(increase && !countDown){
     fill(255)
     textSize(30);
     text('Inhale', windowWidth/2, windowHeight/2 + 200);
@@ -83,8 +85,22 @@ function draw() {
   
   }
   
+  //Countdown----------------------------------------------------------------------
+
+  if(countDown){
+    fill(255)
+    textSize(30);
+    textAlign(CENTER);
+    text(timer, windowWidth/2, windowHeight/2 + 200)
+  }
   
   
-  
+  if (frameCount % 60 == 0 && timer > 0 && countDown) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+    timer --;
+  }
+  if (timer == 0) {
+    countDown = false
+  }
+
 }
 
