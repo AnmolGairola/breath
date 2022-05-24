@@ -27,7 +27,7 @@ function draw() {
   
   if(wait){
     bruh += log(300) * .6
-    print(bruh)
+    //print(bruh)
     
     if(bruh > 300){
       wait = false
