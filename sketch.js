@@ -1,10 +1,10 @@
 let radius = 100, increase = true, wait = false, bruh = 0, countDown = true
 let timer = 3
-
+let ww, wh
 function preload(){
   
-  ww = windowWidth
-  wh = windowHeight
+  ww = displayWidth
+  wh = displayHeight
   
 }
 
@@ -14,7 +14,17 @@ function setup() {
 
 function draw() {  
 
-  createCanvas(displayWidth, displayHeight);
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    ww = displayWidth
+    wh = displayHeight
+}
+  
+else{
+  ww = windowWidth
+  wh = windowHeight
+}
+
+  createCanvas(ww, wh);
   background(36, 36, 36)
 
   
@@ -62,14 +72,14 @@ function draw() {
   
   //Circle------------------------------------------------------
   noStroke()
-  circle(windowWidth/2, windowHeight/2, radius)
+  circle(ww/2, wh/2, radius)
   
   //Text--------------------------------------------------------
  
   if(wait){
     fill(255)
     textSize(30);
-    text('hold', windowWidth/2, windowHeight/2 + 200);
+    text('hold', ww/2, wh/2 + 200);
     textAlign(CENTER);
   
   }
@@ -77,7 +87,7 @@ function draw() {
   else if(increase && !countDown){
     fill(255)
     textSize(30);
-    text('Inhale', windowWidth/2, windowHeight/2 + 200);
+    text('Inhale', ww/2, wh/2 + 200);
     textAlign(CENTER);
   
   }
@@ -85,7 +95,7 @@ function draw() {
   else if(!increase){
     fill(255)
     textSize(30);
-    text('Exhale', windowWidth/2, windowHeight/2 + 200);
+    text('Exhale', ww/2, wh/2 + 200);
     textAlign(CENTER);
   
   }
@@ -96,15 +106,15 @@ function draw() {
     fill(255)
     textSize(30);
     textAlign(CENTER);
-    text(timer, windowWidth/2, windowHeight/2 + 200)
+    text(timer, ww/2, wh/2 + 200)
   }
   
 
-  // fill(255)
-  // textSize(30);
-  // textAlign(CENTER);
-  // text(displayWidth, windowWidth/2, windowHeight/2 + 300)
-  // text(displayHeight, windowWidth/2, windowHeight/2 + 400)
+   fill(255)
+   textSize(30);
+   textAlign(CENTER);
+   text("Testing something", ww/2, wh/2 + 300)
+  // text(displayHeight, ww/2, wh/2 + 400)
   
   if (frameCount % 60 == 0 && timer > 0 && countDown) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
