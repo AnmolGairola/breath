@@ -1,6 +1,7 @@
 let radius = 100, increase = true, wait = false, bruh = 0, countDown = true
 let timer = 3
 let pCounter = 0
+let tS = 25
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -68,7 +69,7 @@ function draw() {
  
   if(wait){
     fill(255)
-    textSize(30);
+    textSize(tS);
     text('hold', windowWidth/2, windowHeight/2 + 200);
     textAlign(CENTER);
   
@@ -78,14 +79,14 @@ function draw() {
     
     if(pCounter == 0){
       fill(255)
-      textSize(30);
+      textSize(tS);
       text('Inhale throught your left nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
     
     else{
       fill(255)
-      textSize(30);
+      textSize(tS);
       text('Inhale throught your right nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
@@ -95,14 +96,14 @@ function draw() {
   else if(!increase){
     if(pCounter == 1){
       fill(255)
-      textSize(30);
+      textSize(tS);
       text('Exhale throught your right nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
     
     else{
       fill(255)
-      textSize(30);
+      textSize(tS);
       text('Exhale throught your left nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
@@ -112,7 +113,7 @@ function draw() {
 
   if(countDown){
     fill(255)
-    textSize(30);
+    textSize(tS);
     textAlign(CENTER);
     text(timer, windowWidth/2, windowHeight/2 + 200)
   }
