@@ -7,8 +7,8 @@ let heightOffset = 2
 
 function preload(){
   
-  ww = ww
-  wh = wh
+  ww = displayWidth
+  wh = displayHeight
   
 }
 
@@ -23,8 +23,9 @@ function draw() {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     ww = displayWidth
     wh = displayHeight
-    heightoffset = 3
-}
+    heightOffset = 3
+
+  }
   
   else{
     ww = windowWidth
