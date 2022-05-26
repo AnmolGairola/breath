@@ -80,14 +80,14 @@ function draw() {
     if(pCounter == 0){
       fill(255)
       textSize(tS);
-      text('Inhale throught your left nostril', windowWidth/2, windowHeight/2 + 200);
+      text('Inhale through your left nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
     
     else{
       fill(255)
       textSize(tS);
-      text('Inhale throught your right nostril', windowWidth/2, windowHeight/2 + 200);
+      text('Inhale through your right nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
   
@@ -97,14 +97,14 @@ function draw() {
     if(pCounter == 1){
       fill(255)
       textSize(tS);
-      text('Exhale throught your right nostril', windowWidth/2, windowHeight/2 + 200);
+      text('Exhale through your right nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
     
     else{
       fill(255)
       textSize(tS);
-      text('Exhale throught your left nostril', windowWidth/2, windowHeight/2 + 200);
+      text('Exhale through your left nostril', windowWidth/2, windowHeight/2 + 200);
       textAlign(CENTER);
     }
   }
