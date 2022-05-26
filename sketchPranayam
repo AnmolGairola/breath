@@ -3,6 +3,7 @@ let timer = 3
 let pCounter = 0
 let tS = 25
 let ww, wh
+let heightOffset = 2
 
 function preload(){
   
@@ -22,6 +23,7 @@ function draw() {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     ww = displayWidth
     wh = displayHeight
+    heightoffset = 3
 }
   
   else{
@@ -81,14 +83,14 @@ function draw() {
   
   //Circle------------------------------------------------------
   noStroke()
-  circle(ww/2, wh/3, radius)
+  circle(ww/2, wh/heightOffset, radius)
   
   //Text--------------------------------------------------------
  
   if(wait){
     fill(255)
     textSize(tS);
-    text('hold', ww/2, wh/3 + 200);
+    text('hold', ww/2, wh/heightOffset + 200);
     textAlign(CENTER);
   
   }
@@ -98,14 +100,14 @@ function draw() {
     if(pCounter == 0){
       fill(255)
       textSize(tS);
-      text('Inhale through your left nostril', ww/2, wh/3 + 200);
+      text('Inhale through your left nostril', ww/2, wh/heightOffset + 200);
       textAlign(CENTER);
     }
     
     else{
       fill(255)
       textSize(tS);
-      text('Inhale through your right nostril', ww/2, wh/3 + 200);
+      text('Inhale through your right nostril', ww/2, wh/heightOffset + 200);
       textAlign(CENTER);
     }
   
@@ -115,14 +117,14 @@ function draw() {
     if(pCounter == 1){
       fill(255)
       textSize(tS);
-      text('Exhale through your right nostril', ww/2, wh/3 + 200);
+      text('Exhale through your right nostril', ww/2, wh/heightOffset + 200);
       textAlign(CENTER);
     }
     
     else{
       fill(255)
       textSize(tS);
-      text('Exhale through your left nostril', ww/2, wh/3 + 200);
+      text('Exhale through your left nostril', ww/2, wh/heightOffset + 200);
       textAlign(CENTER);
     }
   }
@@ -133,7 +135,7 @@ function draw() {
     fill(255)
     textSize(tS);
     textAlign(CENTER);
-    text(timer, ww/2, wh/3 + 200)
+    text(timer, ww/2, wh/heightOffset + 200)
   }
   
   

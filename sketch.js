@@ -1,6 +1,8 @@
 let radius = 100, increase = true, wait = false, bruh = 0, countDown = true
 let timer = 3
 let ww, wh
+let heightOffset = 2
+
 function preload(){
   
   ww = displayWidth
@@ -17,6 +19,7 @@ function draw() {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     ww = displayWidth
     wh = displayHeight
+    heightOffset = 3
 }
   
 else{
@@ -72,14 +75,14 @@ else{
   
   //Circle------------------------------------------------------
   noStroke()
-  circle(ww/2, wh/3, radius)
+  circle(ww/2, wh/heightOffset, radius)
   
   //Text--------------------------------------------------------
  
   if(wait){
     fill(255)
     textSize(30);
-    text('hold', ww/2, wh/3 + 200);
+    text('hold', ww/2, wh/heightOffset + 200);
     textAlign(CENTER);
   
   }
@@ -87,7 +90,7 @@ else{
   else if(increase && !countDown){
     fill(255)
     textSize(30);
-    text('Inhale', ww/2, wh/3 + 200);
+    text('Inhale', ww/2, wh/heightOffset + 200);
     textAlign(CENTER);
   
   }
@@ -95,7 +98,7 @@ else{
   else if(!increase){
     fill(255)
     textSize(30);
-    text('Exhale', ww/2, wh/3 + 200);
+    text('Exhale', ww/2, wh/heightOffset + 200);
     textAlign(CENTER);
   
   }
@@ -106,15 +109,15 @@ else{
     fill(255)
     textSize(30);
     textAlign(CENTER);
-    text(timer, ww/2, wh/3 + 200)
+    text(timer, ww/2, wh/heightOffset + 200)
   }
   
 
   //  fill(255)
   //  textSize(30);
   //  textAlign(CENTER);
-  //  text("Testing something", ww/2, wh/3 + 300)
-  // text(displayHeight, ww/2, wh/3 + 400)
+  //  text("Testing something", ww/2, wh/heightOffset + 300)
+  // text(displayHeight, ww/2, wh/heightOffset + 400)
   
   if (frameCount % 60 == 0 && timer > 0 && countDown) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
