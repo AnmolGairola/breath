@@ -16,7 +16,7 @@ function draw() {
 
   createCanvas(windowWidth, windowHeight);
   background(36, 36, 36)
-  
+
   
   //Inhale----------------------------------------------------
   
