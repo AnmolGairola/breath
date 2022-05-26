@@ -1,11 +1,15 @@
 let radius = 100, increase = true, wait = false, bruh = 0, countDown = true
 let timer = 3
 
+function preload(){
+  
+  ww = windowWidth
+  wh = windowHeight
+  
+}
+
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  createCanvas(windowWidth, windowHeight);
-  
-  
+  createCanvas(ww, wh);  
 }
 
 function draw() {  
