@@ -2,7 +2,7 @@ let radius = 100, increase = true, wait = false, bruh = 0, countDown = true
 let timer = 3
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  //createCanvas(windowWidth, windowHeight);
   
   
 }

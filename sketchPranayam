@@ -4,7 +4,7 @@ let pCounter = 0
 let tS = 25
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  //createCanvas(windowWidth, windowHeight);
   
   
 }
