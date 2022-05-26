@@ -72,14 +72,14 @@ else{
   
   //Circle------------------------------------------------------
   noStroke()
-  circle(ww/2, wh/2, radius)
+  circle(ww/2, wh/3, radius)
   
   //Text--------------------------------------------------------
  
   if(wait){
     fill(255)
     textSize(30);
-    text('hold', ww/2, wh/2 + 200);
+    text('hold', ww/2, wh/3 + 200);
     textAlign(CENTER);
   
   }
@@ -87,7 +87,7 @@ else{
   else if(increase && !countDown){
     fill(255)
     textSize(30);
-    text('Inhale', ww/2, wh/2 + 200);
+    text('Inhale', ww/2, wh/3 + 200);
     textAlign(CENTER);
   
   }
@@ -95,7 +95,7 @@ else{
   else if(!increase){
     fill(255)
     textSize(30);
-    text('Exhale', ww/2, wh/2 + 200);
+    text('Exhale', ww/2, wh/3 + 200);
     textAlign(CENTER);
   
   }
@@ -106,15 +106,15 @@ else{
     fill(255)
     textSize(30);
     textAlign(CENTER);
-    text(timer, ww/2, wh/2 + 200)
+    text(timer, ww/2, wh/3 + 200)
   }
   
 
-   fill(255)
-   textSize(30);
-   textAlign(CENTER);
-   text("Testing something", ww/2, wh/2 + 300)
-  // text(displayHeight, ww/2, wh/2 + 400)
+  //  fill(255)
+  //  textSize(30);
+  //  textAlign(CENTER);
+  //  text("Testing something", ww/2, wh/3 + 300)
+  // text(displayHeight, ww/2, wh/3 + 400)
   
   if (frameCount % 60 == 0 && timer > 0 && countDown) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
