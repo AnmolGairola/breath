@@ -14,7 +14,7 @@ function setup() {
 
 function draw() {  
 
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
   background(36, 36, 36)
 
   
@@ -99,6 +99,12 @@ function draw() {
     text(timer, windowWidth/2, windowHeight/2 + 200)
   }
   
+
+  // fill(255)
+  // textSize(30);
+  // textAlign(CENTER);
+  // text(displayWidth, windowWidth/2, windowHeight/2 + 300)
+  // text(displayHeight, windowWidth/2, windowHeight/2 + 400)
   
   if (frameCount % 60 == 0 && timer > 0 && countDown) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
     timer --;
