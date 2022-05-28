@@ -4,15 +4,25 @@ let pCounter = 0
 let tS = 25
 let ww, wh
 let heightOffset = 2
+let wakeLock = null;
 
-function preload(){
+
+
+async function preload(){
   
+  if ('wakeLock' in navigator) {
+    print("Screen Wake Lock API supported 🎉")
+  }
+
+  wakeLock = await navigator.wakeLock.request("screen");
+
+
   ww = displayWidth
   wh = displayHeight
   
 }
 
-function setup() {
+async function setup() {
   
   createCanvas(ww, wh);
   
@@ -148,5 +158,4 @@ function draw() {
 
 }
 
-//Do not let the browser sleep --------------------------------------------------------------------------------
 

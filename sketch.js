@@ -3,14 +3,18 @@ let timer = 3
 let ww, wh
 let heightOffset = 2
 
-function preload(){
+async function preload(){
   
+  if ('wakeLock' in navigator) {
+    print("Screen Wake Lock API supported 🎉")
+  }
+
   ww = displayWidth
   wh = displayHeight
   
 }
 
-function setup() {
+async function setup() {
   createCanvas(ww, wh);  
 }
 
